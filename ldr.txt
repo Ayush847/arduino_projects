@@ -1,0 +1,19 @@
+int light;
+void setup(){
+  pinMode(13, OUTPUT);
+  Serial.begin(9600);
+}
+void loop(){
+  light = analogRead(A0);
+  if(light > 500)//means its dark
+    {
+      digitalWrite(13, HIGH);//turns on the led
+    }
+    else{
+      digitalWrite(13, LOW);//turns off the led
+    }
+  Serial.println(light);
+  delay(2000);
+}
+
+//youtube video link : https://youtu.be/YSJ53o_ghi8
